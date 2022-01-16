@@ -1,2 +1,2 @@
 # twitter_clone_backEnd
-Clone de twitter (backEnd) echo en golang
+Clone de twitter (backEnd) hecho en golang

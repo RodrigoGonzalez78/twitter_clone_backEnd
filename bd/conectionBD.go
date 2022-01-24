@@ -9,7 +9,7 @@ import (
 )
 
 var MongoCM = ConectarBD()
-var clientOptions = options.Client().ApplyURI("mongodb+srv://rodrick:42742500@twitterclone.88jex.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+var clientOptions = options.Client().ApplyURI("mongodb+srv://rodrick:######@twitterclone.88jex.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 //Funcion para conectar a mongodb
 func ConectarBD() *mongo.Client {

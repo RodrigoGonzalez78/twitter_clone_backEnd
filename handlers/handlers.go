@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 	"twitter_clone_backEnd/middlew"
+	"twitter_clone_backEnd/routers"
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
@@ -13,7 +14,7 @@ import (
 func Manipulators() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/registration", middlew.CheckBD(routers.Registration)).Methods("POST")
+	router.HandleFunc("/registration", middlew.CheckBD(routers.Resgistration)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {

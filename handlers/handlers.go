@@ -18,6 +18,8 @@ func Manipulators() {
 
 	router.HandleFunc("/login", middlew.CheckBD(routers.Login)).Methods("POST")
 
+	router.HandleFunc("/viewprofile", middlew.CheckBD(middlew.CheckJwt(routers.Login))).Methods("POST")
+
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
 		PORT = "8080"

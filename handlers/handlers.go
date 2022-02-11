@@ -18,7 +18,7 @@ func Manipulators() {
 
 	router.HandleFunc("/login", middlew.CheckBD(routers.Login)).Methods("POST")
 
-	router.HandleFunc("/viewprofile", middlew.CheckBD(middlew.CheckJwt(routers.ViewProfile))).Methods("POST")
+	router.HandleFunc("/viewprofile", middlew.CheckBD(middlew.CheckJwt(routers.ViewProfile))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {

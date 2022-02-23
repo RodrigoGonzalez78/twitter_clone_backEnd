@@ -24,6 +24,13 @@ func Manipulators() {
 	router.HandleFunc("/tweet", middlew.CheckBD(middlew.CheckJwt(routers.RecTweet))).Methods("POST")
 	router.HandleFunc("/readtweets", middlew.CheckBD(middlew.CheckJwt(routers.ReadTweets))).Methods("GET")
 	router.HandleFunc("/deletetweet", middlew.CheckBD(middlew.CheckJwt(routers.DeleteTweet))).Methods("DELETE")
+
+	router.HandleFunc("/uploadavatar", middlew.CheckBD(middlew.CheckJwt(routers.UploadAvatar))).Methods("POST")
+	router.HandleFunc("/uploadbanner", middlew.CheckBD(middlew.CheckJwt(routers.UploadBanner))).Methods("POST")
+
+	router.HandleFunc("/getavatar", middlew.CheckBD(middlew.CheckJwt(routers.GetAvatar))).Methods("GET")
+	router.HandleFunc("/getbanner", middlew.CheckBD(middlew.CheckJwt(routers.GetBanner))).Methods("GET")
+
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
 		PORT = "8080"

@@ -22,6 +22,8 @@ func Manipulators() {
 	router.HandleFunc("/modifyProfile", middlew.CheckBD(middlew.CheckJwt(routers.ModifyProfile))).Methods("PUT")
 
 	router.HandleFunc("/tweet", middlew.CheckBD(middlew.CheckJwt(routers.RecTweet))).Methods("POST")
+	router.HandleFunc("/readtweets", middlew.CheckBD(middlew.CheckJwt(routers.ReadTweets))).Methods("GET")
+
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
 		PORT = "8080"

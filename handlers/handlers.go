@@ -31,6 +31,7 @@ func Manipulators() {
 	router.HandleFunc("/getavatar", middlew.CheckBD(middlew.CheckJwt(routers.GetAvatar))).Methods("GET")
 	router.HandleFunc("/getbanner", middlew.CheckBD(middlew.CheckJwt(routers.GetBanner))).Methods("GET")
 
+	router.HandleFunc("/highrelation", middlew.CheckBD(middlew.CheckJwt(routers.HighRelation))).Methods("POST")
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
 		PORT = "8080"

@@ -18,8 +18,8 @@ func ConsultRelation(t models.Relation) (bool, error) {
 	col := db.Collection("relacion")
 
 	condition := bson.M{
-		"userid":         t.UserID,
-		"userrelationid": t.RelationId,
+		"userid":     t.UserID,
+		"relationid": t.RelationId,
 	}
 
 	var result models.Relation

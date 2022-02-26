@@ -81,6 +81,7 @@ func ReadAllUsers(ID string, page int64, search string, tipo string) ([]*models.
 	if err != nil {
 		fmt.Println(err.Error())
 		return results, false
+
 	}
 
 	cur.Close(ctx)

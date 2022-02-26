@@ -37,6 +37,8 @@ func Manipulators() {
 	router.HandleFunc("/consultrelation", middlew.CheckBD(middlew.CheckJwt(routers.ConsultRelation))).Methods("GET")
 
 	router.HandleFunc("/listUsers", middlew.CheckBD(middlew.CheckJwt(routers.ListUsers))).Methods("GET")
+	router.HandleFunc("/readTweetsFollowers", middlew.CheckBD(middlew.CheckJwt(routers.ReadTweetsFollowers))).Methods("GET")
+
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
 		PORT = "8080"

@@ -6,7 +6,6 @@ import (
 	"twitter_clone_backEnd/models"
 )
 
-//Alta relacion
 func HighRelation(w http.ResponseWriter, r *http.Request) {
 	ID := r.URL.Query().Get("id")
 

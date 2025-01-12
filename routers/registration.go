@@ -7,7 +7,6 @@ import (
 	"twitter_clone_backEnd/models"
 )
 
-//Crear el usuario
 func Resgistration(w http.ResponseWriter, r *http.Request) {
 
 	var t models.User
@@ -20,7 +19,7 @@ func Resgistration(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(t.Email) == 0 {
-		http.Error(w, "Imail es requerido!", 400)
+		http.Error(w, "Email es requerido!", 400)
 		return
 	}
 

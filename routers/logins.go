@@ -40,22 +40,12 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	}
 
 	resp := models.ResponseLogin{
-		Token: jwtKey,
+		UserId: document.ID,
+		Token:  jwtKey,
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(resp)
 
-	/*
-
-		####GRABAR COKIES DESDE BACKEND
-		expirationTime := time.Now().Add(24 * time.Hour)
-		http.SetCookie(w, &http.Cookie{
-			Name:    "token",
-			Value:   jwtKey,
-			Expires: expirationTime,
-		})
-
-	*/
 }

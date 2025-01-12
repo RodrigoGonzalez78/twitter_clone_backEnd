@@ -13,7 +13,7 @@ func ModifyProfile(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&t)
 
 	if err != nil {
-		http.Error(w, "Datos incorectos "+err.Error(), 400)
+		http.Error(w, "Datos incorrectos "+err.Error(), 400)
 		return
 	}
 

@@ -9,11 +9,9 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
-//valores para todos los endpoints
 var Email string
 var IDUser string
 
-//Proceso para extraer los datos del token
 func ProcessToken(tk string) (*models.Claim, bool, string, error) {
 	myclave := []byte("Twittor_clone")
 

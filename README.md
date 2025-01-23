@@ -994,47 +994,25 @@ La respuesta es una lista de tweets con el siguiente formato:
 ```json
 [
   {
-    "id": "64d3a2c7f9a0b1e2c8f12345",
-    "user_id": "63bfc58e3e8b2a5d6c8a1234",
-    "name": "John Doe",
-    "content": "Este es mi primer tweet",
-    "timestamp": "2025-01-10T14:23:00Z"
+    "_id": "605c72ef1532075f8838d8d4",
+    "userId": "63bfc58e3e8b2a5d6c8a1234",
+    "userRelationId": "63bfc58e3e8b2a5d6c8a5678",
+    "tweet": {
+      "_id": "605c72ef1532075f8838d8d5",
+      "message": "Este es un tweet de prueba.",
+      "date": "2025-01-23T12:34:56Z"
+    }
   },
   {
-    "id": "64d3a2c7f9a0b1e2c8f67890",
-    "user_id": "63bfc58e3e8b2a5d6c8a5678",
-    "name": "Jane Smith",
-    "content": "¡Hola mundo!",
-    "timestamp": "2025-01-10T14:24:00Z"
+    "_id": "605c72ef1532075f8838d8d6",
+    "userId": "63bfc58e3e8b2a5d6c8a1234",
+    "userRelationId": "63bfc58e3e8b2a5d6c8a5678",
+    "tweet": {
+      "_id": "605c72ef1532075f8838d8d7",
+      "message": "Otro tweet de ejemplo.",
+      "date": "2025-01-22T10:20:30Z"
+    }
   }
 ]
+
 ```
-
-#### **Ejemplo de respuesta fallida**
-```json
-{
-  "error": "Error al leer los tweets"
-}
-```
-
----
-
-
-#### **Solicitud exitosa**
-```http
-GET /readTweetsFollowers?page=1
-```
-
-**Respuesta:**  
-```json
-[
-  {
-    "id": "64d3a2c7f9a0b1e2c8f12345",
-    "user_id": "63bfc58e3e8b2a5d6c8a1234",
-    "name": "John Doe",
-    "content": "Este es mi primer tweet",
-    "timestamp": "2025-01-10T14:23:00Z"
-  }
-]
-```
-

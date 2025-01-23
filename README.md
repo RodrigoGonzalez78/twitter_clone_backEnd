@@ -1,24 +1,5 @@
 # Backend de una app clon de X(Twitter)
 
-
-### **Formato del modelo de usuario**
-El perfil del usuario devuelto tiene el siguiente formato:
-
-```json
-{
-  "id": "string",
-  "name": "string",
-  "lastName": "string",
-  "dateBirth": "string (formato ISO 8601)",
-  "email": "string",
-  "avatar": "string (URL de la imagen)",
-  "banner": "string (URL de la imagen)",
-  "bibliography": "string",
-  "ubication": "string",
-  "webSite": "string (URL del sitio web)"
-}
-```
-
 ### 1. Registro de Usuario
 
 **Endpoint:** `/registration`  
@@ -424,6 +405,7 @@ DELETE /deleteTweet?id=64abcf12345d67890ef12345&userId=64abcdef6789012345678901
 
 **Endpoint:** `/uploadAvatar`  
 **Método:** `POST`
+
 **Descripción:** Permite a un usuario subir una imagen de perfil (avatar) al servidor. El archivo se almacena en el sistema de archivos y la referencia se guarda en la base de datos.
 
 ---

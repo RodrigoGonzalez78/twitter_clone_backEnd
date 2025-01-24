@@ -214,7 +214,7 @@ HTTP/1.1 201 Created
 
 ### 4. Registrar un Tweet
 
-**Endpoint:** `/rectweet`  
+**Endpoint:** `/tweet`  
 **Método:** `POST`  
 **Descripción:** Permite registrar un nuevo tweet para un usuario autenticado.
 

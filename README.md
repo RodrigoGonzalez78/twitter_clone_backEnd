@@ -145,7 +145,7 @@ Content-Type: application/json
 
 ### 3. Modificar Perfil de Usuario
 
-**Endpoint:** `/modifyprofile`  
+**Endpoint:** `/modifyProfile`  
 **Método:** `PUT`  
 **Descripción:** Permite modificar los datos del perfil de un usuario autenticado.
 
@@ -194,7 +194,7 @@ El cliente debe enviar un JSON con los datos que desea modificar. Solo los campo
 
 #### Solicitud
 ```http
-PUT /modifyprofile HTTP/1.1
+PUT /modifyProfile HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 Authorization: Bearer <token-jwt>

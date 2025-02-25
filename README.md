@@ -854,7 +854,7 @@ GET /consultRelation?id=63bfc58e3e8b2a5d6c8a1234
    - Debe ser un entero positivo mayor a 0.
 2. **`type`:** 
    - Opcional. Especifica el tipo de relación que se desea filtrar.
-   - Valores posibles: `followers`, `following`, o vacío para no aplicar filtro.
+   - Valores posibles: `follow`, `new`.
 3. **`search`:** 
    - Opcional. Permite buscar usuarios por términos específicos.
 
@@ -864,8 +864,13 @@ GET /consultRelation?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Ejemplo de solicitud**
 ```http
-GET /listUsers?page=1&type=followers&search=john
+GET /listUsers?page=1&type=new&search=john
 ```
+
+```http
+GET /listUsers?page=1&type=follow&search=john
+```
+
 
 ---
 

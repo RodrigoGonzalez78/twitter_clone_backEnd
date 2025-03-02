@@ -23,7 +23,7 @@ func Resgistration(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if len(t.Email) < 6 {
+	if len(t.Password) < 6 {
 		http.Error(w, "La contaseña debe tener almenos 6 caracteres!", 400)
 		return
 	}

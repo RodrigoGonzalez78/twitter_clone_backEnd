@@ -9,21 +9,22 @@ import (
 
 func ReadTweetsFollowers(w http.ResponseWriter, r *http.Request) {
 
-	if len(r.URL.Query().Get("page")) < 1 {
+	pageParam := r.URL.Query().Get("page")
+	if len(pageParam) < 1 {
 		http.Error(w, "Deve enviar el prametro pagina", http.StatusBadRequest)
 		return
 	}
 
-	page, err := strconv.Atoi(r.URL.Query().Get("page"))
+	page, err := strconv.Atoi(pageParam)
 
-	if err != nil {
+	if err != nil || page < 1 {
 		http.Error(w, "Deve enviar el prametro pagina como entero mayor a 0", http.StatusBadRequest)
 		return
 	}
 
-	respuesta, correcto := bd.ReadTweetsFollowers(IDUser, page)
+	respuesta, err := bd.GetTweetsFollowers(IDUser, page, 20)
 
-	if !correcto {
+	if err != nil {
 		http.Error(w, "Error al leer los tweets", http.StatusBadRequest)
 		return
 	}

@@ -358,7 +358,7 @@ Content-Type: application/json
 
 ### 7. Eliminar Tweet
 
-**Endpoint:** ` /deleteTweet`  
+**Endpoint:** ` /deletetweet`  
 **Método:** `DELETE`  
 **Descripción:** Elimina un tweet específico de la base de datos, asegurándose de que pertenezca al usuario que realiza la solicitud.
 
@@ -384,7 +384,7 @@ Content-Type: application/json
 
 #### **Ejemplo de solicitud**
 ```http
-DELETE /deleteTweet?id=64abcf12345d67890ef12345&userId=64abcdef6789012345678901
+DELETE /deletetweet?id=64abcf12345d67890ef12345&userId=64abcdef6789012345678901
 ```
 
 ---
@@ -403,7 +403,7 @@ DELETE /deleteTweet?id=64abcf12345d67890ef12345&userId=64abcdef6789012345678901
 
 ### 8. Subir Avatar
 
-**Endpoint:** `/uploadAvatar`  
+**Endpoint:** `/uploadavatar`  
 **Método:** `POST`
 
 **Descripción:** Permite a un usuario subir una imagen de perfil (avatar) al servidor. El archivo se almacena en el sistema de archivos y la referencia se guarda en la base de datos.
@@ -432,7 +432,7 @@ DELETE /deleteTweet?id=64abcf12345d67890ef12345&userId=64abcdef6789012345678901
 
 #### **Ejemplo de solicitud**
 ```http
-POST /uploadAvatar
+POST /uploadavatar
 Content-Type: multipart/form-data
 
 FormData:
@@ -456,7 +456,7 @@ FormData:
 
 #### **Solicitud exitosa**
 ```http
-POST /uploadAvatar
+POST /uploadavatar
 Content-Type: multipart/form-data
 
 FormData:
@@ -472,7 +472,7 @@ FormData:
 
 ### 9. Subir Banner
 
-**Endpoint:** `/uploadBanner`  
+**Endpoint:** `/uploadbanner`  
 **Método:** `POST`
 **Descripción:** Permite a un usuario subir una imagen de banner al servidor. El archivo se almacena en el sistema de archivos y la referencia se guarda en la base de datos.
 
@@ -500,7 +500,7 @@ FormData:
 
 #### **Ejemplo de solicitud**
 ```http
-POST /uploadBanner
+POST /uploadbanner
 Content-Type: multipart/form-data
 
 FormData:
@@ -524,7 +524,7 @@ FormData:
 
 #### **Solicitud exitosa**
 ```http
-POST /uploadBanner
+POST /uploadbanner
 Content-Type: multipart/form-data
 
 FormData:
@@ -542,7 +542,7 @@ FormData:
 
 ### 10. Obtener Avatar
 
-**Endpoint:** `/getAvatar`  
+**Endpoint:** `/getavatar`  
 **Método:** `GET`
 **Descripción:** Permite obtener el archivo de avatar asociado a un usuario específico.
 
@@ -568,7 +568,7 @@ FormData:
 
 #### **Ejemplo de solicitud**
 ```http
-GET /getAvatar?id=63bfc58e3e8b2a5d6c8a1234
+GET /getavatar?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 ---
@@ -584,7 +584,7 @@ GET /getAvatar?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Solicitud exitosa**
 ```http
-GET /getAvatar?id=63bfc58e3e8b2a5d6c8a1234
+GET /getavatar?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 **Respuesta:**  
@@ -596,7 +596,7 @@ GET /getAvatar?id=63bfc58e3e8b2a5d6c8a1234
 
 ### 11. Obtener Banner
 
-**Endpoint:** `/getBanner`  
+**Endpoint:** `/getbanner`  
 **Método:** `GET`
 **Descripción:** Permite obtener el archivo de banner asociado a un usuario específico.
 
@@ -622,7 +622,7 @@ GET /getAvatar?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Ejemplo de solicitud**
 ```http
-GET /getBanner?id=63bfc58e3e8b2a5d6c8a1234
+GET /getbanner?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 ---
@@ -637,7 +637,7 @@ GET /getBanner?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Solicitud exitosa**
 ```http
-GET /getBanner?id=63bfc58e3e8b2a5d6c8a1234
+GET /getbanner?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 **Respuesta:**  
@@ -647,7 +647,7 @@ GET /getBanner?id=63bfc58e3e8b2a5d6c8a1234
 
 ### 12. Crear Relación de Usuario
 
-**Endpoint:** `/highRelation`  
+**Endpoint:** `/highrelation`  
 **Método:** `POST`
 **Descripción:** Permite crear una relación entre el usuario autenticado y otro usuario especificado por su ID.
 
@@ -673,7 +673,7 @@ GET /getBanner?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Ejemplo de solicitud**
 ```http
-POST /highRelation?id=63bfc58e3e8b2a5d6c8a1234
+POST /highrelation?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 ---
@@ -688,7 +688,7 @@ POST /highRelation?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Solicitud exitosa**
 ```http
-POST /highRelation?id=63bfc58e3e8b2a5d6c8a1234
+POST /highrelation?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 **Respuesta:**  
@@ -700,7 +700,7 @@ HTTP/1.1 201 Created
 
 ### 13. Eliminar Relación de Usuario
 
-**Endpoint:** `/downRelation`  
+**Endpoint:** `/downrelation`  
 **Método:** `DELETE`
 **Descripción:** Permite eliminar una relación existente entre el usuario autenticado y otro usuario especificado por su ID.
 
@@ -726,7 +726,7 @@ HTTP/1.1 201 Created
 
 #### **Ejemplo de solicitud**
 ```http
-DELETE /downRelation?id=63bfc58e3e8b2a5d6c8a1234
+DELETE /downrelation?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 ---
@@ -744,7 +744,7 @@ DELETE /downRelation?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Solicitud exitosa**
 ```http
-DELETE /downRelation?id=63bfc58e3e8b2a5d6c8a1234
+DELETE /downrelation?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 **Respuesta:**  
@@ -756,7 +756,7 @@ HTTP/1.1 201 Created
 
 ### 14. Consultar Relación entre Usuarios
 
-**Endpoint:** `/consultRelation`  
+**Endpoint:** `/consultrelation`  
 **Método:** `GET`
 **Descripción:** Permite verificar si existe una relación entre el usuario autenticado y otro usuario especificado por su ID.
 
@@ -782,7 +782,7 @@ HTTP/1.1 201 Created
 
 #### **Ejemplo de solicitud**
 ```http
-GET /consultRelation?id=63bfc58e3e8b2a5d6c8a1234
+GET /consultrelation?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 ---
@@ -819,7 +819,7 @@ GET /consultRelation?id=63bfc58e3e8b2a5d6c8a1234
 
 #### **Solicitud exitosa**
 ```http
-GET /consultRelation?id=63bfc58e3e8b2a5d6c8a1234
+GET /consultrelation?id=63bfc58e3e8b2a5d6c8a1234
 ```
 
 **Respuesta:**  
@@ -1002,7 +1002,7 @@ La respuesta es una lista de tweets con el siguiente formato:
     "_id": "605c72ef1532075f8838d8d4",
     "userId": "63bfc58e3e8b2a5d6c8a1234",
     "userRelationId": "63bfc58e3e8b2a5d6c8a5678",
-    "tweet": {
+    "Tweet": {
       "_id": "605c72ef1532075f8838d8d5",
       "message": "Este es un tweet de prueba.",
       "date": "2025-01-23T12:34:56Z"
@@ -1012,7 +1012,7 @@ La respuesta es una lista de tweets con el siguiente formato:
     "_id": "605c72ef1532075f8838d8d6",
     "userId": "63bfc58e3e8b2a5d6c8a1234",
     "userRelationId": "63bfc58e3e8b2a5d6c8a5678",
-    "tweet": {
+    "Tweet": {
       "_id": "605c72ef1532075f8838d8d7",
       "message": "Otro tweet de ejemplo.",
       "date": "2025-01-22T10:20:30Z"
